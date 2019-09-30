@@ -1,0 +1,14 @@
+﻿@model IEnumerable<COMP2084_MusicStore.Models.Album>
+
+@{
+    ViewData["Title"] = "Albums";
+}
+
+<h2>Albums</h2>
+
+<ul>
+@foreach (var album in Model)
+{
+    <li>@album.Name</li>
+}
+</ul>
