@@ -36,9 +36,5 @@ namespace COMP2084_MusicStore.Controllers
 
             return View(albums);
         }
-        public IActionResult Store()
-        {
-            return View();
-        }
     }
 }
