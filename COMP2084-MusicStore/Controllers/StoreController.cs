@@ -31,7 +31,7 @@ namespace COMP2084_MusicStore.Controllers
 
             for (int i = 0; i < 10; i++)
             {
-                albums.Add(new Album { Name = "Album " + i.ToString() });
+                albums.Add(new Album { Title = "Album " + i.ToString() });
             }
 
             return View(albums);

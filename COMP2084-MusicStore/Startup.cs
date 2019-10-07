@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using COMP2084_MusicStore.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using COMP2084_MusicStore.Models;
 
 namespace COMP2084_MusicStore
 {
@@ -41,6 +42,9 @@ namespace COMP2084_MusicStore
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<MusicStoreContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("MusicStoreContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
